@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   resources :static_pages, only: :show
   resources :users
+  resources :google_forms
   # get 'static_pages/home'
   # get 'static_pages/contact_us'
 end

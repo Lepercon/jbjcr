@@ -149,6 +149,14 @@ div.incorrect_counter {
   }
 }
 
+.navbar-custom li a {
+  color: white;
+}
+
+.navbar-custom li a:hover {
+  text-decoration:underline;
+}
+
 .navbar_fixed_top {
   color: #ff0000;
 }

@@ -1,0 +1,5 @@
+class GoogleForm < ApplicationRecord
+
+	
+
+end

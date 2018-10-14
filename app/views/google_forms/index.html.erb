@@ -1,0 +1,11 @@
+<% provide(:title, 'All formals') %>
+
+<h1>Formals</h1>
+<%- @google_forms.each do |gf| %>
+	<p><%= link_to "#{gf.formalname}", google_form_path(gf.id) %><p>
+
+<% end %>
+<p> wahoo it works </p>
+<%= link_to "Add new formal", new_google_form_path %>
+
+
