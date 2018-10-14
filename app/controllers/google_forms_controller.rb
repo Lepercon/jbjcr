@@ -23,6 +23,31 @@ class GoogleFormsController < ApplicationController
 		end
 	end
 
+	def edit
+		@google_form = GoogleForm.find(params[:id])
+	end
+
+	def update
+		@google_form = GoogleForm.find(params[:id])
+		respond_to do |format|
+			if @google_form.update(google_form_params)
+				format.html { redirect_to @google_form, notice: 'Formal 
+															was successfully updated.'}
+			else 
+				format.html { render :edit }
+			end
+		end
+	end
+
+	def destroy
+    @google_form = GoogleForm.find(params[:id])
+    @google_form.destroy
+    respond_to do |format|
+      format.html { redirect_to google_forms_path}
+      flash[:success] = "Formal deleted"
+    end
+  end
+
 
 	private
 

@@ -1,6 +1,14 @@
+<% provide(:title, @google_form.formalname) %>
 
+<div class="row", align="center">
+	<div class="col-md-6 col-md-offset-3">
+		<h1><%= @google_form.formalname %></h1>
+		<a href="<%= @google_form.formallink %>">Sign up here!</a>
+		<h2><%= @google_form.description %></h2>
 
-	<h><%= @google_form.formalname %></h>
-
-<%= link_to "All formals", google_forms_path %>
+		<h2><%= link_to "Edit this formal", edit_google_form_path(@google_form) %></h2>
+		<h2><%= link_to "Delete this formal", google_form_path(@google_form), method: :delete %></h2>
+		<b><%= link_to "All formals", google_forms_path %></b>
+	</div>
+</div>
 
