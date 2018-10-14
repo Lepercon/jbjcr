@@ -1,0 +1,26 @@
+<% provide(:title, 'Edit formal') %>
+
+<h1>Edit the <%= @google_form.formalname %> formal</h1>
+<br>
+<div class="row", align="center">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@google_form, url: google_form_path(@google_form.id), method: :patch) do |f| %>
+      
+      <%= render 'shared/google_form_error_messages' %>
+      
+      <%= f.label :formalname, "Name of formal" %>
+      <%= f.text_field :formalname, class: 'form-control' %>
+
+      <%= f.label :formallink, "Signup link" %>
+      <%= f.text_field :formallink, class: 'form-control' %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control' %>
+      <br>
+
+      <%= f.submit "Update formal", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
