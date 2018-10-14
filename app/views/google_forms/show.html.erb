@@ -1,9 +1,6 @@
 
 
-<%- if !@googleform.nil? %>
-	<h><%= @googleform.formalname %></h>
-<% else %>
-	<p> youve reached the show page but there's no formal</p>
-<% end %>
+	<h><%= @google_form.formalname %></h>
 
+<%= link_to "All formals", google_forms_path %>
 
