@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   resources :static_pages, only: :show
   resources :users
   resources :google_forms
+  
   resources :users
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
+
+  resources :claims
 end
